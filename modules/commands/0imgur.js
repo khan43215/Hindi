@@ -3,8 +3,9 @@ module.exports.config = {
   version: "1.0.0",
   permission: 0,
   credits: "Nayan",
-  description: "", 
-  commandCategory: "user", 
+  description: "",
+  useprefix: true, 
+  commandcategory: "user", 
   usages: "Link",
   cooldowns: 5,
   dependencies: {
@@ -13,7 +14,7 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event, args }) => {
     const axios = global.nodemodule['axios'];
-  const apis = await axios.get('https://raw.githubusercontent.com/MR-NAYAN-404/NAYAN-BOT/main/api.json')
+  const apis = await axios.get('https://raw.githubusercontent.com/MOHAMMAD-NAYAN/Nayan/main/api.json')
   const n = apis.data.api
     const linkanh = event.messageReply.attachments[0].url || args.join(" ");
     if (!linkanh)
